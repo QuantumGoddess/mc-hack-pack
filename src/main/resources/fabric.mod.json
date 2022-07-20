@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "mchackpack",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "MC hack pack",
+  "description": "a minecraft client mod which provides hacks for your minecraft character",
   "authors": [
-    "Me!"
+    "QuantumGoddess"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/QuantumGoddess/mc-hack-pack"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0",
+  "icon": "assets/mchackpack/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -26,7 +26,7 @@
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mchackpack.mixins.json"
   ],
 
   "depends": {
