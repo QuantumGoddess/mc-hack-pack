@@ -1,6 +1,6 @@
-package net.fabricmc.MCHacks.hacks;
+package net.quantumgoddess.mchackpack.hacks;
 
-import net.fabricmc.MCHacks.MCHacksClient;
+import net.quantumgoddess.mchackpack.MCHacksClient;
 
 public final class XRayHack extends Hack
 {

@@ -1,4 +1,4 @@
-package net.fabricmc.MCHacks;
+package net.quantumgoddess.mchackpack;
 
 import java.util.ArrayList;
 import java.util.Arrays;

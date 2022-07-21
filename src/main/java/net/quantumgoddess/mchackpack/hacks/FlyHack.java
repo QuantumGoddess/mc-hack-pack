@@ -1,10 +1,10 @@
-package net.fabricmc.MCHacks.hacks;
+package net.quantumgoddess.mchackpack.hacks;
 
-import net.fabricmc.MCHacks.MCHacks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket.OnGroundOnly;
 import net.minecraft.util.math.Vec3d;
+import net.quantumgoddess.mchackpack.MCHacks;
 
 public final class FlyHack extends Hack
 {

@@ -1,8 +1,9 @@
-package net.fabricmc.MCHacks;
+package net.quantumgoddess.mchackpack;
 
-import net.fabricmc.MCHacks.hacks.FlyHack;
-import net.fabricmc.MCHacks.hacks.XRayHack;
 import net.fabricmc.api.ModInitializer;
+import net.quantumgoddess.mchackpack.hacks.FlyHack;
+import net.quantumgoddess.mchackpack.hacks.XRayHack;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

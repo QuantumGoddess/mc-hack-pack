@@ -1,4 +1,4 @@
-package net.fabricmc.MCHacks.hacks;
+package net.quantumgoddess.mchackpack.hacks;
 
 import java.util.Objects;
 
