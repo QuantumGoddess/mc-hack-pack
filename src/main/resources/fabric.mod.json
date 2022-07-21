@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.MCHacks.MCHacks"
+      "net.quantumgoddess.mchackpack.MCHacks"
     ],
     "client": [
-      "net.fabricmc.MCHacks.MCHacksClient"
+      "net.quantumgoddess.mchackpack.MCHacksClient"
     ]
   },
   "mixins": [
