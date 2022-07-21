@@ -3,7 +3,6 @@
  */
 package screens;
 
-import net.fabricmc.MCHacks.MCHacks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.MessageScreen;
@@ -18,6 +17,7 @@ import net.minecraft.client.realms.gui.screen.RealmsMainScreen;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
+import net.quantumgoddess.mchackpack.MCHacks;
 
 @Environment(value=EnvType.CLIENT)
 public class MCHacksScreen
