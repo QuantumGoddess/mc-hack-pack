@@ -5,17 +5,9 @@ package screens;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.gui.screen.MessageScreen;
-import net.minecraft.client.gui.screen.OpenToLanScreen;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.screen.StatsScreen;
-import net.minecraft.client.gui.screen.TitleScreen;
-import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
-import net.minecraft.client.gui.screen.option.OptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.realms.gui.screen.RealmsMainScreen;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.quantumgoddess.mchackpack.MCHacks;
 
@@ -24,39 +16,18 @@ public class MCHacksScreen
 extends Screen {
 
     public MCHacksScreen() {
-        super(Text.translatable("MCHacks.menu"));
+        super(Text.translatable("menu.mchackpack.title"));
     }
 
     @Override
     protected void init() {
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 24 + -16, 204, 20, Text.translatable("MCHacks.menuFly" + MCHacks.flyHack.getState()), button -> {
+        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 24 + -16, 204, 20, Text.translatable("hacks.mchackpack.fly", MCHacks.flyHack.getState()), button -> {
             MCHacks.flyHack.toggle();
-            
+            button.setMessage(Text.translatable("hacks.mchackpack.fly", MCHacks.flyHack.getState()));
         }));
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 48 + -16, 98, 20, Text.translatable("MCHacks.menuXray" + MCHacks.xray.getState()), button -> MCHacks.xray.toggle()));
-        this.addDrawableChild(new ButtonWidget(this.width / 2 + 4, this.height / 4 + 48 + -16, 98, 20, Text.translatable("gui.stats"), button -> this.client.setScreen(new StatsScreen(this, this.client.player.getStatHandler()))));
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 96 + -16, 98, 20, Text.translatable("menu.options"), button -> this.client.setScreen(new OptionsScreen(this, this.client.options))));
-        ButtonWidget buttonWidget2 = this.addDrawableChild(new ButtonWidget(this.width / 2 + 4, this.height / 4 + 96 + -16, 98, 20, Text.translatable("menu.shareToLan"), button -> this.client.setScreen(new OpenToLanScreen(this))));
-        buttonWidget2.active = this.client.isIntegratedServerRunning() && !this.client.getServer().isRemote();
-        MutableText text = this.client.isInSingleplayer() ? Text.translatable("menu.returnToMenu") : Text.translatable("menu.disconnect");
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 120 + -16, 204, 20, text, button -> {
-            boolean bl = this.client.isInSingleplayer();
-            boolean bl2 = this.client.isConnectedToRealms();
-            button.active = false;
-            this.client.world.disconnect();
-            if (bl) {
-                this.client.disconnect(new MessageScreen(Text.translatable("menu.savingLevel")));
-            } else {
-                this.client.disconnect();
-            }
-            TitleScreen titleScreen = new TitleScreen();
-            if (bl) {
-                this.client.setScreen(titleScreen);
-            } else if (bl2) {
-                this.client.setScreen(new RealmsMainScreen(titleScreen));
-            } else {
-                this.client.setScreen(new MultiplayerScreen(titleScreen));
-            }
+        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 48 + -16, 204, 20, Text.translatable("hacks.mchackpack.xray", MCHacks.xray.getState()), button -> {
+            MCHacks.xray.toggle();
+            button.setMessage(Text.translatable("hacks.mchackpack.xray", MCHacks.xray.getState()));
         }));
     }
 
