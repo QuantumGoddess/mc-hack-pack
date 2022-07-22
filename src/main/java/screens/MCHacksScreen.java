@@ -21,8 +21,14 @@ extends Screen {
 
     @Override
     protected void init() {
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 24 + -16, 204, 20, Text.translatable("hacks.mchackpack.fly" + MCHacks.flyHack.getState()), button -> MCHacks.flyHack.toggle()));
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 48 + -16, 204, 20, Text.translatable("hacks.mchackpack.xray" + MCHacks.xray.getState()), button -> MCHacks.xray.toggle()));
+        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 24 + -16, 204, 20, Text.translatable("hacks.mchackpack.fly", MCHacks.flyHack.getState()), button -> {
+            MCHacks.flyHack.toggle();
+            button.setMessage(Text.translatable("hacks.mchackpack.fly", MCHacks.flyHack.getState()));
+        }));
+        this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, this.height / 4 + 48 + -16, 204, 20, Text.translatable("hacks.mchackpack.xray", MCHacks.xray.getState()), button -> {
+            MCHacks.xray.toggle();
+            button.setMessage(Text.translatable("hacks.mchackpack.xray", MCHacks.xray.getState()));
+        }));
     }
 
     @Override
